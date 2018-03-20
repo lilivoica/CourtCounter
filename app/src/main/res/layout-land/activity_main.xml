@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="com.example.android.courtcounter.MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/style_team"
+                    android:text="@string/teamA" />
+
+                <TextView
+                    android:id="@+id/team_a_score"
+                    style="@style/style_score" />
+
+                <Button
+                    style="@style/style_button"
+                    android:onClick="addThreeForTeamA"
+                    android:text="@string/threePoints" />
+
+                <Button
+                    style="@style/style_button"
+                    android:onClick="addTwoForTeamA"
+                    android:text="@string/twoPoints" />
+
+                <Button
+                    style="@style/style_button"
+                    android:onClick="addOneForTeamA"
+                    android:text="@string/onePoints" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/style_team"
+                    android:text="@string/teamB" />
+
+                <TextView
+                    android:id="@+id/team_b_score"
+                    style="@style/style_score" />
+
+                <Button
+                    style="@style/style_button"
+                    android:onClick="addTreeForTeamB"
+                    android:text="@string/threePoints" />
+
+                <Button
+                    style="@style/style_button"
+                    android:onClick="addTwoForTeamB"
+                    android:text="@string/twoPoints" />
+
+                <Button
+                    style="@style/style_button"
+                    android:onClick="addOneForTeamB"
+                    android:text="@string/onePoints" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linearLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:onClick="resetScor"
+            android:text="@string/reset"
+            android:textColor="@color/colorTextButton"
+            android:textSize="@dimen/text_button" />
+
+    </RelativeLayout>
+</ScrollView>
+
